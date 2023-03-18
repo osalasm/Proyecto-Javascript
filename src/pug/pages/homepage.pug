@@ -1,0 +1,28 @@
+-
+
+    //- ::: Variables PUG ::: -//
+
+    let base = '';
+
+
+//- ::: Include Head & Body ::: -//
+include ../includes/head
+
+<div x-data="main()" x-init="fetch(url).then(response => response.json()).then(json => {characters = json.results;})">
+    <ul>
+        <template x-for="personaje in characters">
+            <h1>hola</h1>
+            <li x-text="personaje.name"></li>
+            <img x-bind:src="personaje.image">
+        </template>
+    </ul>
+
+</div>
+
+
+
+//- :::  Section of Plugins in this Page ::: -//
+//- +background_youtube()
+
+//- :::  Star Footer Content ::: -//
+//- include ../includes/footer

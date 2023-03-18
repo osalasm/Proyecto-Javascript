@@ -1,0 +1,25 @@
+<script></script><script></script><script> //- https://es.fakenamegenerator.com/gen-male-us-us.php</script><script> //- https://www.getrandomthings.com/list-common-fruits.php</script><script></script><!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<title>Proyecto Base</title>
+<script type="text/javascript" src="assets/js/jquery.js" ></script>
+<script type="text/javascript" src="assets/js/slides.js" defer></script>
+<script type="text/javascript" src="assets/js/plugins.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+<script src="//unpkg.com/alpinejs" defer></script>
+<script  src="assets/js/script.js" defer></script>
+</head>
+<body class="slides scroll"><div x-data="main()" x-init="fetch(url).then(response => response.json()).then(json => {characters = json.results;})">
+<ul>
+<template x-for="personaje in characters">
+<h1>hola</h1>
+<li x-text="personaje.name"></li>
+<img x-bind:src="personaje.image">
+</template>
+</ul>
+</div>
